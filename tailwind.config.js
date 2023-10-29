@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Raleway', 'sans-serif'],
+      oleo: ['Oleo Script', 'sans-serif'],
     },
   },
 

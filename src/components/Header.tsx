@@ -18,7 +18,7 @@ const Links = ['Projects', 'AboutMe', 'Contact']
 const NavLink = (props: Props) => {
   const { children } = props
   return (
-    <div className="font-sans font-medium px-3">
+    <div className="font-sans font-semibold px-3">
       <a href="/">{children}</a>
     </div>
   )
@@ -28,12 +28,10 @@ function Header() {
 
   return (
     <>
-      <div className="py-3 px-10">
+      <div className="py-1 px-10 mb-7">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack alignItems={'center'}>
-            <p className="font-sans font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r to-blue-500 from-orange-400">
-              Soyeon Lee
-            </p>
+            <p className="font-oleo font-bold text-2xl">Soyeon Lee</p>
           </HStack>
           <Flex alignItems={'center'}>
             <HStack
