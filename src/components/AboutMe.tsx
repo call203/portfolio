@@ -28,11 +28,7 @@ const SkillBox = (datas: SkillBoxProps) => {
 }
 
 function AboutMe() {
-  const [toggle, setToggle] = useState(false)
-
-  useEffect(() => {
-    console.log(toggle)
-  }, [toggle])
+  const [toggle, setToggle] = useState(true)
 
   const handleButton = () => {
     setToggle(!toggle)
@@ -69,14 +65,28 @@ function AboutMe() {
             <Image
               src={BlackAvatar}
               alt="profile img"
-              className="h-auto max-w-full w-1/3 hidden lg:block"
+              className="h-auto max-w-full w-4/12 hidden lg:block"
             />
-            <div>
-              As a frontend developer, my expertise lies in creating seamless
-              and intuitive user experiences. I specialize in using cutting-edge
-              technologies to produce high-quality web applications.
-              Specifically, I have vast knowledge of ReactJS and NodeJS, which
-              allow me to build complex and dynamic applications with ease.
+            <div className="lg:text-lg text-md">
+              I am always
+              <span className="font-bold">
+                {' '}
+                seeking innovation and continually expanding my skill set,
+              </span>
+              spanning both front-end and back-end development. My focus is on
+              identifying opportunities for
+              <span className="font-bold">
+                {' '}
+                growth and crafting solutions that make a meaningful impact.
+              </span>
+              Beyond coding, I strive to understand the human elements that
+              shape digital experiences. My dedication to delivering results
+              goes hand-in-hand with
+              <span className="font-bold">
+                {' '}
+                my passion for creating digital experiences that leave a lasting
+                impact.
+              </span>
             </div>
           </div>
         </>
@@ -87,12 +97,12 @@ function AboutMe() {
               <SkillBox
                 imgSrc={SmartPhone}
                 title="Mobile Applications"
-                content="Developing mobile apps with seamless user experiences."
+                content="Crafting seamless and intuitive mobile apps to deliver exceptional user experiences."
               />
               <SkillBox
-                imgSrc={Html}
-                title="Skills"
-                content="I have built complex apps before, and if you work with people who truly understand the app system"
+                imgSrc={WWW}
+                title="Web Applications"
+                content="Developing dynamic and user-friendly web experiences that captivate and engage"
               />
             </div>
           </div>
@@ -101,17 +111,18 @@ function AboutMe() {
               <SkillBox
                 imgSrc={Cursor}
                 title="Frontend Development"
-                content="I bring ideas to life in the browser, coding from scratch."
+                content="Transforming ideas into reality within the browser. 
+                 [React, React Native, NextJS, Redux]"
               />
               <SkillBox
                 imgSrc={Servers}
                 title="Backend Development"
-                content="Building powerful server-side systems, coding from scratch."
+                content="Building powerful server-side systems, coding from scratch. [Spring, NodeJS]"
               />
               <SkillBox
-                imgSrc={WWW}
-                title="Web Applications"
-                content="Creating dynamic and intuitive web experiences."
+                imgSrc={Html}
+                title="Languages"
+                content="JavaScript, TypeScript, Python, HTML, CSS, SQL, Java"
               />
             </div>
           </div>

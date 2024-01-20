@@ -1,21 +1,34 @@
 import './App.css'
+
 import { ChakraProvider } from '@chakra-ui/react'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
+import Company from './components/Company'
 
 function App() {
+  const handleScroll = (item: React.ReactNode) => {
+    if (item) {
+      const container = document.getElementById(item.toString())
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
   return (
     <ChakraProvider>
       <div className="App">
-        <Header />
+        <Header handleScroll={handleScroll} />
         <Home />
-        <div className="py-20 px-3">
+        <div className="pb-24 pt-40 px-3" id="AboutMe">
           <AboutMe />
         </div>
-
+        <div className="py-24 lg:px-40 px-5" id="Company">
+          <Company />
+        </div>
         <Footer />
       </div>
     </ChakraProvider>

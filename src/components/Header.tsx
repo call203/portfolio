@@ -4,26 +4,34 @@ import {
   HStack,
   IconButton,
   useDisclosure,
-  useColorModeValue,
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 interface Props {
   children: React.ReactNode
+  handleScroll: (item: React.ReactNode) => void
 }
 
-const Links = ['Projects', 'AboutMe', 'Contact']
+interface HeaderProps {
+  handleScroll: (item: React.ReactNode) => void
+}
+
+const Links = ['AboutMe', 'Company', 'Projects', 'Contact']
 
 const NavLink = (props: Props) => {
-  const { children } = props
+  const { children, handleScroll } = props
   return (
-    <div className="font-sans font-semibold px-3">
-      <a href="/">{children}</a>
+    <div
+      className="font-sans font-semibold px-3 text-sm"
+      onClick={() => handleScroll(children)}
+    >
+      {children}
     </div>
   )
 }
-function Header() {
+
+function Header({ handleScroll }: HeaderProps) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -31,7 +39,9 @@ function Header() {
       <div className="py-1 px-10 mb-7">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack alignItems={'center'}>
-            <p className="font-oleo font-bold text-2xl">Soyeon Lee</p>
+            <p className="font-oleo font-bold lg:text-3xl text-xl">
+              Soyeon Lee
+            </p>
           </HStack>
           <Flex alignItems={'center'}>
             <HStack
@@ -40,7 +50,9 @@ function Header() {
               display={{ base: 'none', md: 'flex' }}
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link} handleScroll={handleScroll}>
+                  {link}
+                </NavLink>
               ))}
             </HStack>
           </Flex>
@@ -58,7 +70,9 @@ function Header() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link} handleScroll={handleScroll}>
+                  {link}
+                </NavLink>
               ))}
             </Stack>
           </Box>
