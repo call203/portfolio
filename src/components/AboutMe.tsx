@@ -1,11 +1,12 @@
-import { Button, Image } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { Image } from '@chakra-ui/react'
+import { useState } from 'react'
 import BlackAvatar from '../assets/BlackAvatar.png'
 import Cursor from '../assets/cursor.png'
 import Html from '../assets/html.png'
 import Servers from '../assets/servers.png'
 import SmartPhone from '../assets/smartphone.png'
 import WWW from '../assets/www.png'
+import { motion } from 'framer-motion'
 
 interface SkillBoxProps {
   imgSrc: string
@@ -13,9 +14,19 @@ interface SkillBoxProps {
   content: string
 }
 
+const box = {
+  reset: { rotate: 0 },
+  hover: { rotate: 8, transition: { duration: 0.3 } },
+}
+
 const SkillBox = (datas: SkillBoxProps) => {
   return (
-    <div className="flex flex-wrap border border-1 border-gray-300 rounded-xl p-6">
+    <motion.div
+      variants={box}
+      initial="rest"
+      whileHover="hover"
+      className="flex flex-wrap border border-1 border-gray-300 rounded-xl p-6"
+    >
       <div className="grid grid-col-2 w-52 text-start">
         <div className="mb-14">
           <Image src={datas.imgSrc} className="w-8" />
@@ -23,7 +34,7 @@ const SkillBox = (datas: SkillBoxProps) => {
         <div className="font-semibold mb-2">{datas.title}</div>
         <div className="text-slate-600 ">{datas.content}</div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -35,7 +46,7 @@ function AboutMe() {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-sans">
       <div className="flex justify-center">
         <button
           onClick={() => handleButton()}
@@ -61,7 +72,16 @@ function AboutMe() {
 
       {toggle ? (
         <>
-          <div className="flex justify-center font-sans grid-cols-2 items-center lg:mt-5 mt-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2,
+              ease: [0, 0.5, 0.2, 1.01],
+            }}
+            className="flex justify-center font-sans grid-cols-2 items-center lg:mt-5 mt-10"
+          >
             <Image
               src={BlackAvatar}
               alt="profile img"
@@ -88,7 +108,7 @@ function AboutMe() {
                 impact.
               </span>
             </div>
-          </div>
+          </motion.div>
         </>
       ) : (
         <>

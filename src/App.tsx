@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import Company from './components/Company'
+import Project from './components/Project'
+import Contact from './components/Contact'
 
 function App() {
   const handleScroll = (item: React.ReactNode) => {
@@ -28,6 +30,12 @@ function App() {
         </div>
         <div className="py-24 lg:px-40 px-5" id="Company">
           <Company />
+        </div>
+        <div className="py-24 lg:px-40 px-5" id="Project">
+          <Project />
+        </div>
+        <div className="py-24 lg:px-64 px-20" id="Contact">
+          <Contact />
         </div>
         <Footer />
       </div>

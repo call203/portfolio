@@ -17,7 +17,7 @@ interface HeaderProps {
   handleScroll: (item: React.ReactNode) => void
 }
 
-const Links = ['AboutMe', 'Company', 'Projects', 'Contact']
+const Links = ['AboutMe', 'Company', 'Project', 'Contact']
 
 const NavLink = (props: Props) => {
   const { children, handleScroll } = props
@@ -36,7 +36,7 @@ function Header({ handleScroll }: HeaderProps) {
 
   return (
     <>
-      <div className="py-1 px-10 mb-7">
+      <div className="py-1 px-10 mb-7 sticky top-0 bg-white z-50">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack alignItems={'center'}>
             <p className="font-oleo font-bold lg:text-3xl text-xl">

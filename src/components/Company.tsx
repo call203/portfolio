@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Experiences } from '../assets/data'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -11,10 +11,6 @@ interface ExperiencesProps {
 }
 
 const CustomDot = ({ onMove, index, active, onClick }: any) => {
-  useEffect(() => {
-    console.log(active)
-    console.log(index)
-  }, [active, index])
   return (
     <div
       className={`w-44 h-1.5 ${
@@ -49,8 +45,8 @@ function Company() {
   const [companyIdx, setCompanyIdx] = useState(0)
 
   return (
-    <div className="container">
-      <h1 className="font-bold text-2xl mb-16 text-center">Companies</h1>
+    <div className="container font-sans">
+      <h1 className="font-bold text-2xl mb-16 text-center">Company</h1>
       <div className="hidden lg:flex flex-row">
         <div className="flex flex-row">
           <div className="flex-col">
