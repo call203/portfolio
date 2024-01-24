@@ -29,3 +29,27 @@ export const Experiences = [
     ],
   },
 ]
+
+export const Projects = [
+  {
+    title: 'Local Service Provider Connection Platform',
+    short: 'My SQL, NestJs, NextJs, Prisma, Git',
+    info:
+      'Website that allows users to search for, rate, and hire local service providers to work on a variety of personal projects',
+    git: 'https://github.com/orgs/web-architectures-project/repositories',
+  },
+  {
+    title: 'Machine Learning Models of Gait Analysis',
+    short: 'Android, Java, Python, Firebase, Colab ',
+    info:
+      'A Study on the Method of Differentiating Between Elderly Walking and Non-Senior Walking Using Machine Learning Models',
+    site: 'http://koreascience.or.kr/article/JAKO202128837704022.page',
+  },
+  {
+    title: 'User Experience Research - 4 Mobile apps design',
+    short: 'Figma',
+    info:
+      'Conducted research and surverys to identify service issues, define solutions, and establish userflow, while also designing UI/UX',
+    site: 'https://soyeonwork.webflow.io/',
+  },
+]

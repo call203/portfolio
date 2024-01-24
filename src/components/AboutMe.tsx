@@ -87,7 +87,7 @@ function AboutMe() {
               alt="profile img"
               className="h-auto max-w-full w-4/12 hidden lg:block"
             />
-            <div className="lg:text-lg text-md">
+            <div className="lg:text-lg text-md text-center lg:text-start">
               I am always
               <span className="font-bold">
                 {' '}

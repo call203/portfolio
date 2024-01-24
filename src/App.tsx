@@ -34,7 +34,7 @@ function App() {
         <div className="py-24 lg:px-40 px-5" id="Project">
           <Project />
         </div>
-        <div className="py-24 lg:px-64 px-20" id="Contact">
+        <div className="pb-24 pt-60 lg:px-80 px-10" id="Contact">
           <Contact />
         </div>
         <Footer />
