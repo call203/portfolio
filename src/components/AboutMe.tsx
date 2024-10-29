@@ -1,23 +1,19 @@
-import { Image } from '@chakra-ui/react'
-import { useState } from 'react'
-import BlackAvatar from '../assets/BlackAvatar.png'
-import Cursor from '../assets/cursor.png'
-import Html from '../assets/html.png'
-import Servers from '../assets/servers.png'
-import SmartPhone from '../assets/smartphone.png'
-import WWW from '../assets/www.png'
-import { motion } from 'framer-motion'
+import { Image } from "@chakra-ui/react";
+import { useState } from "react";
+import BlackAvatar from "../assets/BlackAvatar.png";
+
+import { motion } from "framer-motion";
 
 interface SkillBoxProps {
-  imgSrc: string
-  title: string
-  content: string
+  list?: Array<String>;
+  title: string;
+  content: string;
 }
 
 const box = {
   reset: { rotate: 0 },
   hover: { rotate: 8, transition: { duration: 0.3 } },
-}
+};
 
 const SkillBox = (datas: SkillBoxProps) => {
   return (
@@ -28,22 +24,33 @@ const SkillBox = (datas: SkillBoxProps) => {
       className="flex flex-wrap border border-1 border-gray-300 rounded-xl p-6"
     >
       <div className="grid grid-col-2 w-52 text-start">
-        <div className="mb-14">
-          <Image src={datas.imgSrc} className="w-8" />
+        <div className="font-semibold mb-14">{datas.title}</div>
+        <div className="flex flex-col">
+          <div className="pb-1 flex flex-row flex-wrap">
+            {datas?.list?.map((i) => {
+              return (
+                <div className="rounded-full bg-gray-400 mr-1 mt-1">
+                  <div className="text-white px-2 py-1 text-xs">{i}</div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div>
+            <div className="text-slate-600 ">{datas.content}</div>
+          </div>
         </div>
-        <div className="font-semibold mb-2">{datas.title}</div>
-        <div className="text-slate-600 ">{datas.content}</div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 function AboutMe() {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(true);
 
   const handleButton = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
 
   return (
     <div className="container mx-auto font-sans">
@@ -52,8 +59,8 @@ function AboutMe() {
           onClick={() => handleButton()}
           className={`mx-4 rounded-lg px-5 py-2 ${
             toggle
-              ? 'bg-black text-white'
-              : 'text-slate-400 bg-white  border border-slate-400'
+              ? "bg-black text-white"
+              : "text-slate-400 bg-white  border border-slate-400"
           }`}
         >
           About Me
@@ -62,8 +69,8 @@ function AboutMe() {
           onClick={() => handleButton()}
           className={`mx-4 rounded-lg px-5 py-2 ${
             !toggle
-              ? 'bg-black text-white'
-              : 'text-slate-400 bg-white  border border-slate-400'
+              ? "bg-black text-white"
+              : "text-slate-400 bg-white  border border-slate-400"
           }`}
         >
           Coding Skills
@@ -90,20 +97,20 @@ function AboutMe() {
             <div className="lg:text-lg text-md text-center lg:text-start">
               I am always
               <span className="font-bold">
-                {' '}
+                {" "}
                 seeking innovation and continually expanding my skill set,
               </span>
               spanning both front-end and back-end development. My focus is on
               identifying opportunities for
               <span className="font-bold">
-                {' '}
-                growth and crafting solutions that make a meaningful impact.
+                {" "}
+                growth and crafting solutions that make a meaningful impact.{" "}
               </span>
               Beyond coding, I strive to understand the human elements that
               shape digital experiences. My dedication to delivering results
               goes hand-in-hand with
               <span className="font-bold">
-                {' '}
+                {" "}
                 my passion for creating digital experiences that leave a lasting
                 impact.
               </span>
@@ -115,12 +122,12 @@ function AboutMe() {
           <div className="flex font-sans justify-center mt-10">
             <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
               <SkillBox
-                imgSrc={SmartPhone}
+                // list={["JavaScript", "TypeScript", "HTML", "CSS", "Python"]}
                 title="Mobile Applications"
                 content="Crafting seamless and intuitive mobile apps to deliver exceptional user experiences."
               />
               <SkillBox
-                imgSrc={WWW}
+                // list={["JavaScript", "TypeScript", "HTML", "CSS", "Python"]}
                 title="Web Applications"
                 content="Developing dynamic and user-friendly web experiences that captivate and engage"
               />
@@ -129,27 +136,33 @@ function AboutMe() {
           <div className="flex font-sans justify-center mt-10">
             <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               <SkillBox
-                imgSrc={Cursor}
-                title="Frontend Development"
-                content="Transforming ideas into reality within the browser. 
-                 [React, React Native, NextJS, Redux]"
+                list={[
+                  "ReactJS",
+                  "React Native",
+                  " NextJS",
+                  " NestJS",
+                  "Spring",
+                  "NodeJS",
+                ]}
+                title="FrameWork"
+                content="Primarily focused on React, with a strong emphasis on the latest advancements in its ecosystem. Passionate about this tools it offers, including Redux, Hooks, and beyond"
               />
               <SkillBox
-                imgSrc={Servers}
-                title="Backend Development"
-                content="Building powerful server-side systems, coding from scratch. [Spring, NodeJS]"
-              />
-              <SkillBox
-                imgSrc={Html}
+                list={["JavaScript", "TypeScript", "HTML", "CSS", "Python"]}
                 title="Languages"
-                content="JavaScript, TypeScript, Python, HTML, CSS, SQL, Java"
+                content="TS/JS is my main languages, with extensive experience in ReactJS. I actively stay up-to-date with the lastest trends in these technologies"
+              />
+              <SkillBox
+                list={["Linux", "Git", "MySQL", "Firebase", "Docker"]}
+                title="Tools/Systems"
+                content="Experienced in or developing to advancing all listed skills with the goal of achieving mastery"
               />
             </div>
           </div>
         </>
       )}
     </div>
-  )
+  );
 }
 
-export default AboutMe
+export default AboutMe;

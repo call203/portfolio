@@ -1,5 +1,5 @@
-import Avatar from '../assets/Avatar.png'
-import { Image } from '@chakra-ui/image'
+import Avatar from "../assets/Avatar.png";
+import { Image } from "@chakra-ui/image";
 
 function Home() {
   return (
@@ -18,7 +18,7 @@ function Home() {
         <p>Soyeon Lee</p>
       </div>
       <div className="justify-center  text-center font-bold mb-5 text-sm lg:text-lg">
-        <p>Full stack Web & App Developer</p>
+        <p>Web & App Developer</p>
       </div>
       <div className="flex justify-center">
         <p className="lg:w-1/3 w-2/4 lg:text-lg text-md font-normal text-center">
@@ -28,7 +28,7 @@ function Home() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

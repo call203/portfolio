@@ -1,8 +1,8 @@
-import { Image } from '@chakra-ui/react'
-import { motion, Variant } from 'framer-motion'
-import LinkedIn from '../assets/LinkedIN_black.png'
-import Github from '../assets/Github_black.png'
-import Mail from '../assets/Mail_black.png'
+import { Image } from "@chakra-ui/react";
+import { motion, Variant } from "framer-motion";
+import LinkedIn from "../assets/LinkedIN_black.png";
+import Github from "../assets/Github_black.png";
+import Mail from "../assets/Mail_black.png";
 
 function Contact() {
   const cardVariants: Variant | any = {
@@ -12,12 +12,12 @@ function Contact() {
     onscreen: {
       y: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         bounce: 0.2,
         duration: 0.8,
       },
     },
-  }
+  };
   const cardVariants1: Variant | any = {
     offscreen: {
       y: -300,
@@ -25,13 +25,13 @@ function Contact() {
     onscreen: {
       y: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         bounce: 0.2,
         duration: 0.8,
         delay: 0.1,
       },
     },
-  }
+  };
 
   const cardVariants2: Variant | any = {
     offscreen: {
@@ -40,13 +40,13 @@ function Contact() {
     onscreen: {
       y: 0,
       transition: {
-        type: 'spring',
+        type: "spring",
         bounce: 0.2,
         duration: 0.8,
         delay: 0.2,
       },
     },
-  }
+  };
 
   return (
     <div className="container mx-auto font-sans text-center ">
@@ -55,7 +55,7 @@ function Contact() {
       </div>
       <div className="flex justify-center font-light">
         <p>
-          Although I'm currentlu looking for any new opportunities, my inbox is
+          Although I'm currently looking for any new opportunities, my inbox is
           always open. Whether you have a quetion or jest want to way hi, I'll
           try my best to get back to you!
         </p>
@@ -83,7 +83,7 @@ function Contact() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
