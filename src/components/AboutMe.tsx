@@ -1,7 +1,6 @@
 import { Image } from "@chakra-ui/react";
 import { useState } from "react";
 import BlackAvatar from "../assets/BlackAvatar.png";
-
 import { motion } from "framer-motion";
 
 interface SkillBoxProps {
