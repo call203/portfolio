@@ -1,32 +1,32 @@
-import './App.css'
+import "./App.css";
 
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './components/Home'
-import AboutMe from './components/AboutMe'
-import Company from './components/Company'
-import Project from './components/Project'
-import Contact from './components/Contact'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Stack from "./components/Stack";
+import Company from "./components/Company";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function App() {
   const handleScroll = (item: React.ReactNode) => {
     if (item) {
-      const container = document.getElementById(item.toString())
+      const container = document.getElementById(item.toString());
       if (container) {
-        container.scrollIntoView({ behavior: 'smooth' })
+        container.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }
+  };
 
   return (
     <ChakraProvider>
       <div className="App">
         <Header handleScroll={handleScroll} />
         <Home />
-        <div className="pb-24 pt-40 px-3" id="AboutMe">
-          <AboutMe />
+        <div className="pb-24 pt-40 px-3" id="Stack">
+          <Stack />
         </div>
         <div className="py-24 lg:px-40 px-5" id="Company">
           <Company />
@@ -40,7 +40,7 @@ function App() {
         <Footer />
       </div>
     </ChakraProvider>
-  )
+  );
 }
 
-export default App
+export default App;
