@@ -47,21 +47,55 @@ export const Experiences = [
 
 export const Projects = [
   {
+    title: "Chat Platform",
+    stack: ["React", "NestJS", "MySQL", "TailwindCSS"],
+    date: "2024.06 - 2024.09",
+    job: "Socket.IO를 이용한 실시간 채팅 서비스 - 개인 프로젝트",
+    info: ["채팅 서비스를 위한 실시간 데이터 통신", "팔로우 및 팔로잉 기능"],
+    site: "https://jelly-rain-253.notion.site/Chat-Platform-135294064dcc8034abf5ed17af27f3e6?pvs=4"
+  },
+  {
+    title: "Investigate JavaScript code smells using SonarQube",
+    stack: ["My SQL", "NestJs", "NextJs", "Prisma", "Docker", "TailwindCSS"],
+    date: "2024.06 - 2024.09",
+    info: [],
+    job: "가장 유의해야할 JavaScript의 코드 스멜과 코드 분석 툴의 효율성 연구 - 석사 논문",
+    site: "https://drive.google.com/file/d/1pc-03rWQrBK4EzLBxWBrj6zXlpQTAxCa/view?usp=sharing"
+  },
+  {
     title: "Local Service Provider Connection Platform",
-    short: "My SQL, NestJs, NextJs, Prisma, Git",
-    info: "Website that allows users to search for, rate, and hire local service providers to work on a variety of personal projects",
-    git: "https://github.com/orgs/web-architectures-project/repositories"
+    stack: ["My SQL", "NestJs", "NextJs", "Prisma", "Docker", "Tailwind"],
+    date: "2023.09 - 2023.12",
+    job: "기술자를 직접 찾을 수 있는 서비스 매칭 플랫폼 - 팀 프로젝트",
+    info: [
+      "GDPR을 고려한 Cookie 와 Session 설정",
+      "Provider 와 Custom 등록  및 관리",
+      "UI/UX 설계 및 반응형 웹 개발 리드"
+    ],
+    site: "https://jelly-rain-253.notion.site/Local-Service-Provider-Connection-Platform-134294064dcc80f39497df7393a2ba4b?pvs=4"
   },
   {
-    title: "Machine Learning Models of Gait Analysis",
-    short: "Android, Java, Python, Firebase, Colab ",
-    info: "A Study on the Method of Differentiating Between Elderly Walking and Non-Senior Walking Using Machine Learning Models",
-    site: "http://koreascience.or.kr/article/JAKO202128837704022.page"
-  },
-  {
-    title: "User Experience Research - 4 Mobile apps design",
-    short: "Figma",
-    info: "Conducted research and surverys to identify service issues, define solutions, and establish userflow, while also designing UI/UX",
+    title: "User Experience 연구",
+    stack: ["Figma"],
+    date: "2022.09 - 2022.12",
+    job: "팀 프로젝트",
+    info: [
+      "Figma를 이용해 4개의 모바일 애플리케이션 UI/UX를 설계",
+      "사용성 테스트와 설문조사를 통해 사용자 흐름 분석 및 개선점 도출",
+      "서비스 문제 분석 및 UX 향상을 위한 해결 방안 제시"
+    ],
     site: "https://soyeonwork.webflow.io/"
+  },
+  {
+    title: "고령자와 비 고령자 보행 구분을 위한 머신러닝 모델 연구 ",
+    stack: ["Java", "Android", "Firebase"],
+    date: "2020.06 - 2020.06",
+    job: "앱 개발 및 데이터 관리 담당 - 학사 논문",
+    info: [
+      "안드로이드 앱 구축 및 데이터 수집 환경 개발",
+      "Firebase를 사용하여 보행 데이터를 실시간으로 수집 및 관리",
+      "Firebase 기반 사용자 인증 및 사용자 정보 수집 시스템 구현"
+    ],
+    site: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002761394"
   }
 ];

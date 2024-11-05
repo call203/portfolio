@@ -38,7 +38,7 @@ const Experience = ({ name, date, detail, job, about }: ExperiencesProps) => {
         {job.map((i) => {
           return (
             <div className="mt-2">
-              <span className="text-sm px-3 py-1 bg-black text-white rounded-full font-semibold mr-2">
+              <span className="text-sm px-3 py-1 bg-black text-white rounded-full font-semibold mr-1">
                 {i}
               </span>
             </div>

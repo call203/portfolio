@@ -7,20 +7,20 @@ import Mail from "../assets/Mail_black.png";
 function Contact() {
   const cardVariants: Variant | any = {
     offscreen: {
-      y: -300,
+      y: -300
     },
     onscreen: {
       y: 0,
       transition: {
         type: "spring",
         bounce: 0.2,
-        duration: 0.8,
-      },
-    },
+        duration: 0.8
+      }
+    }
   };
   const cardVariants1: Variant | any = {
     offscreen: {
-      y: -300,
+      y: -300
     },
     onscreen: {
       y: 0,
@@ -28,14 +28,14 @@ function Contact() {
         type: "spring",
         bounce: 0.2,
         duration: 0.8,
-        delay: 0.1,
-      },
-    },
+        delay: 0.1
+      }
+    }
   };
 
   const cardVariants2: Variant | any = {
     offscreen: {
-      y: -300,
+      y: -300
     },
     onscreen: {
       y: 0,
@@ -43,9 +43,9 @@ function Contact() {
         type: "spring",
         bounce: 0.2,
         duration: 0.8,
-        delay: 0.2,
-      },
-    },
+        delay: 0.2
+      }
+    }
   };
 
   return (
@@ -55,9 +55,7 @@ function Contact() {
       </div>
       <div className="flex justify-center font-light">
         <p>
-          Although I'm currently looking for any new opportunities, my inbox is
-          always open. Whether you have a quetion or jest want to way hi, I'll
-          try my best to get back to you!
+          궁금하신 점이 있거나 더 알아보고 싶으시다면 언제든지 환영합니다 :){" "}
         </p>
       </div>
       <motion.div

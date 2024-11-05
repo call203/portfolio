@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import Avatar from "../assets/Avatar.png";
 import { Image } from "@chakra-ui/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 function Home() {
   const motionRef = useRef(null);
