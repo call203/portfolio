@@ -17,7 +17,7 @@ interface HeaderProps {
   handleScroll: (item: React.ReactNode) => void;
 }
 
-const Links = ["Stack", "Company", "Project", "Contact"];
+const Links = ["About", "Stack", "Company", "Project", "Contact"];
 
 const NavLink = (props: Props) => {
   const { children, handleScroll } = props;
