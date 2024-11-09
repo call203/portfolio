@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Experiences } from "../assets/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -16,7 +16,7 @@ interface ExperiencesProps {
   }[];
 }
 
-const CustomDot = ({ onMove, index, active, onClick }: any) => {
+const CustomDot = ({ active, onClick }: any) => {
   return (
     <div
       className={`w-44 h-1.5 ${
@@ -66,7 +66,6 @@ const Experience = ({ name, date, detail, job, about }: ExperiencesProps) => {
 
 function Company() {
   const [companyIdx, setCompanyIdx] = useState(0);
-  const motionRef = useRef(null);
 
   return (
     <div className="container font-sans">
