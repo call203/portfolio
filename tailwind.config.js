@@ -1,13 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
-    fontFamily: {
-      sans: ['Raleway', 'sans-serif'],
-      oleo: ['Oleo Script', 'sans-serif'],
+    extend: {
+      screens: {
+        xs: { min: "380px" }
+      }
     },
+    fontFamily: {
+      sans: ["Raleway", "sans-serif"],
+      oleo: ["Oleo Script", "sans-serif"]
+    }
   },
 
-  plugins: [],
-}
+  plugins: []
+};

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BackgroundText } from "./BackgroundText.tsx";
 
 interface SkillBoxProps {
   list?: Array<String>;
@@ -46,27 +47,8 @@ const SkillBox = (datas: SkillBoxProps) => {
 function AboutMe() {
   return (
     <div className="container mx-auto font-sans">
-      <div className="flex justify-center">
-        <h1 className="font-bold text-2xl mb-16 text-center">Stack</h1>
-      </div>
+      <BackgroundText text={"Stack"} />
       <>
-        <div className="flex font-sans justify-center">
-          <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
-            <SkillBox
-              // list={["JavaScript", "TypeScript", "HTML", "CSS", "Python"]}
-              title="Mobile Applications"
-              // content="Crafting seamless and intuitive mobile apps to deliver exceptional user experiences."
-
-              content="React Natvie 그리고 여러 센서 기술들을 통해 쌓은 많은 경험이 있으며 사용자 경험 최적화에 중점을 두고 구현하려고 노력합니다."
-            />
-            <SkillBox
-              // list={["JavaScript", "TypeScript", "HTML", "CSS", "Python"]}
-              title="Web Applications"
-              // content="Developing dynamic and user-friendly web experiences that captivate and engage"
-              content="동적인고 사용하기 쉬운 웹 인터페이스를 구축하고, 깊은 인상을 남기는 웹 경험을 제공하는 것을 목표로 합니다."
-            />
-          </div>
-        </div>
         <div className="flex font-sans justify-center mt-10">
           <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <SkillBox

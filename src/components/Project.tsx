@@ -1,6 +1,7 @@
 import { Projects } from "../assets/data";
 import { Image } from "@chakra-ui/react";
 import LinkImage from "../assets/Link.png";
+import { BackgroundText } from "./BackgroundText.tsx";
 
 interface ProjectBoxProps {
   title: string;
@@ -58,7 +59,7 @@ const ProjectBox = ({
 function Project() {
   return (
     <div className="container mx-auto font-sans">
-      <h1 className="font-bold text-2xl mb-16 text-center">Project</h1>
+      <BackgroundText text={"Project"} />
       <div className="">
         {Projects.map((item, index) => {
           return (

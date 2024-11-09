@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Experiences } from "../assets/data";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { BackgroundText } from "./BackgroundText.tsx";
 
 interface ExperiencesProps {
   title?: string;
@@ -65,10 +66,11 @@ const Experience = ({ name, date, detail, job, about }: ExperiencesProps) => {
 
 function Company() {
   const [companyIdx, setCompanyIdx] = useState(0);
+  const motionRef = useRef(null);
 
   return (
     <div className="container font-sans">
-      <h1 className="font-bold text-2xl mb-16 text-center">Experience</h1>
+      <BackgroundText text={"Experience"} />
       <div className="hidden lg:flex flex-row">
         <div className="flex flex-row">
           <div className="flex-col">
@@ -85,7 +87,7 @@ function Company() {
                     setCompanyIdx(index);
                   }}
                 >
-                  <div className="text-left ml-3 text-lg">{item.title}</div>
+                  <div className="text-left ml-3 text-lg ">{item.title}</div>
                 </div>
               );
             })}

@@ -1,14 +1,10 @@
-import { useEffect, useRef } from "react";
-import Avatar from "../assets/Avatar.png";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Myself from "../assets/Me.png";
 
 export const About = () => {
   const motionRef = useRef(null);
   const isInView = useInView(motionRef, { once: false });
-
-  useEffect(() => {
-    console.log(isInView);
-  }, [isInView]);
 
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -19,16 +15,16 @@ export const About = () => {
     })
   };
   return (
-    <div className="container mx-auto font-sans h-[60vh] flex flex-col md:flex-row text-zinc-500">
-      <div className="flex-1 items-center flex justify-center">
+    <div className="container mx-auto font-sans h-[110vh] md:h-[40vh]  flex flex-col md:flex-row text-zinc-500">
+      <div className="items-center flex-[0.5] md:flex-[0.7] justify-center p-10 content-center flex ">
         <img
-          src={Avatar}
-          alt="profile img "
-          className="md:w-7/12 w-8/12 h-auto mb-7 md:mb-0"
+          src={Myself}
+          alt="profile img"
+          className="max-w-full max-h-[270px] lg:max-h-[500px] rounded-3xl "
         />
       </div>
       <div
-        className="flex-1 md:text-lg text-base flex flex-col justify-center"
+        className="flex-[1.5] md:flex-[1.3] md:text-lg text-base flex flex-col md:justify-center"
         ref={motionRef}
       >
         <div className="flex">
