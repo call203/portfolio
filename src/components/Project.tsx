@@ -1,6 +1,4 @@
-import { Experiences, Projects } from "../data";
-import { Image } from "@chakra-ui/react";
-
+import { Projects } from "../utils/data";
 import { Content } from "./ContentBox/Content";
 
 function Project() {
@@ -14,8 +12,8 @@ function Project() {
           Project
         </div>
       </div>
-      {Experiences.map((item) => {
-        return <Content {...item} />;
+      {Projects.map((item, index) => {
+        return <Content {...item} key={index} />;
       })}
     </div>
   );

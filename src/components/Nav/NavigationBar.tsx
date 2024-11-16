@@ -1,53 +1,43 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  IconButton,
-  useDisclosure,
-  Stack
-} from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { NavData } from "./NavData";
-
-interface Props {
-  children: React.ReactNode;
-  handleScroll: (item: React.ReactNode) => void;
-}
+import { useState } from "react";
+import { NavData } from "../../utils/NavData";
 
 interface HeaderProps {
   handleScroll: (item: React.ReactNode) => void;
 }
 
-const Links = NavData.map((i) => i.title);
-
-const NavLink = (props: Props) => {
-  const { children, handleScroll } = props;
-  return (
-    <div
-      className="font-sans font-semibold px-3 text-sm"
-      onClick={() => handleScroll(children)}
-    >
-      {children}
-    </div>
-  );
-};
-
 function NavigationBar({ handleScroll }: HeaderProps) {
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+
+  const handleClickMenu = (submenu: string) => {
+    handleScroll(submenu);
+    setActiveMenu(submenu);
+  };
   return (
     <>
       <div className="pl-8 py-8">
         {NavData.map((menu, index) => {
           return (
-            <div
-              key={index}
-              className="mb-4"
-              onClick={() => handleScroll(menu.title)}
-            >
-              <div className="font-extrabold">{menu.title}</div>
+            <div key={index} className="mb-4">
+              <div
+                className="font-extrabold"
+                onClick={() => handleScroll(menu.title)}
+              >
+                {menu.title}
+              </div>
               <ul className="list-disc">
                 {menu.subMenu.map((submenu, index) => {
                   return (
-                    <li className="ml-4 text-sm text-zinc-500">{submenu}</li>
+                    <li
+                      key={index}
+                      className={`ml-4 text-sm  ${
+                        activeMenu === submenu
+                          ? "text-yellow-400 font-extrabold"
+                          : "text-zinc-500"
+                      } focus:text-yellow-300 `}
+                      onClick={() => handleClickMenu(submenu)}
+                    >
+                      {submenu}
+                    </li>
                   );
                 })}
               </ul>

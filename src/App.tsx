@@ -30,32 +30,29 @@ function App() {
   return (
     <ChakraProvider>
       <div className="App font-sans">
-        {/* */}
-        <Home />
+        <div style={{ background: "#f6f0eacc" }}>
+          <Home />
+        </div>
 
-        <div
-          className="md:py-36 py-10 md:px-20 px-3"
-          id="About"
-          style={{ background: "#f6f0eacc" }}
-        >
+        <div className="md:py-36 py-10 md:px-20 px-3" id="About">
           <AboutMe />
         </div>
         <div className="flex flex-row">
-          <div className="lg:flex hidden sticky top-0 flex-col h-[90vh] w-2/12">
+          <div className="lg:flex hidden sticky top-24 flex-col h-[90vh] w-2/12">
             <NavigationBar handleScroll={handleScroll} />
           </div>
 
-          <div className="flex w-full">
-            <div className="px-3 py-0">
-              <div className="py-10 md:px-20 px-3" id="Experience">
-                <Company />
-              </div>
-              <div className="py-10 md:px-20 px-3" id="Project">
-                <Project />
-              </div>
+          {/* <div className="flex w-full"> */}
+          <div className="px-3 py-0">
+            <div className="py-10 md:px-20 px-3" id="Experience">
+              <Company />
+            </div>
+            <div className="py-10 md:px-20 px-3" id="Project">
+              <Project />
             </div>
           </div>
         </div>
+        {/* </div> */}
 
         <ScorllTopButton handScrollToTop={handScrollToTop} />
 

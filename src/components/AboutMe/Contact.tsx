@@ -1,7 +1,7 @@
 export const Contact = () => {
   return (
     <div
-      className="bg-white px-5 py-3  rounded-lg text-black border-zinc-500 border"
+      className="bg-white px-5 py-3 rounded-lg text-black border-zinc-500 border md:text-base text-sm"
       style={{ borderColor: "black", borderWidth: "1px" }}
     >
       <div className=" relative inline-block mb-2">

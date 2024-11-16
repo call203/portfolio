@@ -7,6 +7,7 @@ module.exports = {
         xs: { min: "380px" }
       }
     },
+
     fontFamily: {
       sans: ["Raleway", "sans-serif"],
       oleo: ["Oleo Script", "sans-serif"]

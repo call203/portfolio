@@ -15,8 +15,9 @@ export const AboutMe = () => {
       transition: { delay: i * 0.4, duration: 0.7 }
     })
   };
+
   return (
-    <div className="container mx-auto font-sans h-[100vh] md:h-[40vh]  flex flex-col md:flex-row text-zinc-500 ">
+    <div className="container mx-auto font-sans flex flex-col md:flex-row text-zinc-500 ">
       <div className="items-center flex-[0.5] md:flex-[0.7] justify-center p-10 content-center flex ">
         <img
           src={Myself}

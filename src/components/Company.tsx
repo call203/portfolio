@@ -1,4 +1,4 @@
-import { Experiences } from "../data";
+import { Experiences } from "../utils/data";
 import "react-multi-carousel/lib/styles.css";
 import { Content } from "./ContentBox/Content";
 
@@ -13,8 +13,8 @@ function Company() {
           Experience
         </div>
       </div>
-      {Experiences.map((item) => {
-        return <Content {...item} />;
+      {Experiences.map((item, index) => {
+        return <Content {...item} key={index} />;
       })}
     </div>
   );
