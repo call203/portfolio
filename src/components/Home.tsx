@@ -2,7 +2,7 @@ import DownImage from "../assets/Down.png";
 
 function Home() {
   return (
-    <div className="container mx-auto font-sans flex flex-col justify-center item-center h-[100vh] relative  text-center">
+    <div className="container mx-auto font-sans flex flex-col justify-center item-center h-[88vh] relative  text-center">
       <div className="">
         <div className="md:text-8xl text-5xl font-extrabold md:mb-4 mb-2">
           Hello, I'm

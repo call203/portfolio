@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { BackgroundText } from "./BackgroundText.tsx";
 
 interface SkillBoxProps {
   list?: Array<String>;
@@ -47,7 +46,6 @@ const SkillBox = (datas: SkillBoxProps) => {
 function AboutMe() {
   return (
     <div className="container mx-auto font-sans">
-      <BackgroundText text={"Stack"} />
       <>
         <div className="flex font-sans justify-center mt-10">
           <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
