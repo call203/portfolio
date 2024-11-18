@@ -4,7 +4,6 @@ import { TitleProps } from "../../utils/types";
 import { useEffect } from "react";
 import { useInViewWithRef } from "../../store/useInView";
 import { useViewStore } from "../../store/viewStore";
-import { NavData } from "../../utils/NavData";
 
 export const Content = ({
   title,

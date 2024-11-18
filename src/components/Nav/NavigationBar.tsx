@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { NavData } from "../../utils/NavData";
 import { useViewStore } from "../../store/viewStore";
 
@@ -7,24 +6,11 @@ interface HeaderProps {
 }
 
 function NavigationBar({ handleScroll }: HeaderProps) {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
-
   const handleClickMenu = (submenu: string) => {
     handleScroll(submenu);
-    setActiveMenu(submenu);
   };
 
   const { section } = useViewStore();
-
-  useEffect(() => {
-    if (section) {
-      setActiveMenu(null);
-    }
-
-    // if (activeMenu) {
-    //   setSection(null);
-    // }
-  }, [section]);
 
   return (
     <>
