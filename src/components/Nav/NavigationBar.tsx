@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavData } from "../../utils/NavData";
+import { useViewStore } from "../../store/viewStore";
 
 interface HeaderProps {
   handleScroll: (item: React.ReactNode) => void;
@@ -12,6 +13,19 @@ function NavigationBar({ handleScroll }: HeaderProps) {
     handleScroll(submenu);
     setActiveMenu(submenu);
   };
+
+  const { section } = useViewStore();
+
+  useEffect(() => {
+    if (section) {
+      setActiveMenu(null);
+    }
+
+    // if (activeMenu) {
+    //   setSection(null);
+    // }
+  }, [section]);
+
   return (
     <>
       <div className="pl-8 py-8">
@@ -30,7 +44,7 @@ function NavigationBar({ handleScroll }: HeaderProps) {
                     <li
                       key={index}
                       className={`ml-4 text-sm  ${
-                        activeMenu === submenu
+                        section === submenu
                           ? "text-yellow-400 font-extrabold"
                           : "text-zinc-500"
                       } focus:text-yellow-300 `}

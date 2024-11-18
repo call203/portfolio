@@ -1,6 +1,7 @@
 import { Experiences } from "../utils/data";
 import "react-multi-carousel/lib/styles.css";
 import { Content } from "./ContentBox/Content";
+import { NavData } from "../utils/NavData";
 
 function Company() {
   return (
@@ -14,7 +15,14 @@ function Company() {
         </div>
       </div>
       {Experiences.map((item, index) => {
-        return <Content {...item} key={index} />;
+        return (
+          <Content
+            {...item}
+            key={index}
+            index={index}
+            navTitle={NavData[0].subMenu[index]}
+          />
+        );
       })}
     </div>
   );

@@ -1,8 +1,9 @@
-import { Projects } from "../utils/data";
-import { NavData } from "../utils/NavData";
+import { Certificates } from "../utils/data";
+import "react-multi-carousel/lib/styles.css";
 import { Content } from "./ContentBox/Content";
+import { NavData } from "../utils/NavData";
 
-function Project() {
+function Certificate() {
   return (
     <div>
       <div className=" border-b-4 pb-5 mb-10 border-yellow-300">
@@ -10,20 +11,21 @@ function Project() {
           className="md:text-5xl text-4xl text-black"
           style={{ fontWeight: "800" }}
         >
-          Project
+          Certificate
         </div>
       </div>
-      {Projects.map((item, index) => {
+      {Certificates.map((item, index) => {
         return (
           <Content
             {...item}
             key={index}
             index={index}
-            navTitle={NavData[1].subMenu[index]}
+            navTitle={NavData[3].subMenu[index]}
           />
         );
       })}
     </div>
   );
 }
-export default Project;
+
+export default Certificate;

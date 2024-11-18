@@ -13,6 +13,11 @@ export interface TitleProps {
   about?: string;
   subtitle: string;
   date: string;
-  jobs: Job[];
+  jobs?: Job[];
   links?: Link[];
+  skills?: string[];
+}
+
+export interface ViewRefProps {
+  viewRef?: React.RefObject<HTMLDivElement>;
 }

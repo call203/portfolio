@@ -9,12 +9,16 @@ import Project from "./components/Project";
 import { AboutMe } from "./components/AboutMe/AboutMe";
 import NavigationBar from "./components/Nav/NavigationBar";
 import { ScorllTopButton } from "./components/ScrollTopButton";
+import { Education } from "./components/Educations";
+import Certificate from "./components/Certificate";
+import Award from "./components/Awards";
 
 function App() {
   const handleScroll = (item: React.ReactNode) => {
     if (item) {
       const container = document.getElementById(item.toString());
       if (container) {
+        // container.style.scrollMarginTop = "50px";
         container.scrollIntoView({ behavior: "smooth" });
       }
     }
@@ -38,11 +42,10 @@ function App() {
           <AboutMe />
         </div>
         <div className="flex flex-row">
-          <div className="lg:flex hidden sticky top-24 flex-col h-[90vh] w-2/12">
+          <div className="lg:flex hidden sticky top-[5vh] flex-col h-[90vh] w-2/12">
             <NavigationBar handleScroll={handleScroll} />
           </div>
 
-          {/* <div className="flex w-full"> */}
           <div className="px-3 py-0">
             <div className="py-10 md:px-20 px-3" id="Experience">
               <Company />
@@ -50,9 +53,17 @@ function App() {
             <div className="py-10 md:px-20 px-3" id="Project">
               <Project />
             </div>
+            <div className="py-10 md:px-20 px-3" id="Education">
+              <Education />
+            </div>
+            <div className="py-10 md:px-20 px-3" id="Certificate">
+              <Certificate />
+            </div>
+            <div className="py-10 md:px-20 px-3" id="Award">
+              <Award />
+            </div>
           </div>
         </div>
-        {/* </div> */}
 
         <ScorllTopButton handScrollToTop={handScrollToTop} />
 
