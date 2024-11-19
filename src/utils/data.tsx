@@ -112,7 +112,7 @@ export const Projects = [
   {
     title: "Chat Platform",
     subtitle: "개인 프로젝트",
-    about: "WebSocket 기반 팔로우 사용자 실시간 채팅 시스템",
+    about: "WebSocket 기반 팔로우 및 사용자 실시간 채팅 시스템",
     date: "2024.06 - 2024.10",
     skills: [
       "TypeScript",
