@@ -12,10 +12,8 @@ import { ScorllTopButton } from "./components/ScrollTopButton";
 import { Education } from "./components/Educations";
 import Certificate from "./components/Certificate";
 import Award from "./components/Awards";
-import { useViewStore } from "./store/viewStore";
 
 function App() {
-  const { section } = useViewStore();
   const handleScroll = (item: React.ReactNode) => {
     if (item) {
       const container = document.getElementById(item.toString());
