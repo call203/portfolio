@@ -1,16 +1,26 @@
 import { NavData } from "../../utils/NavData";
 import { useViewStore } from "../../store/viewStore";
+import { useEffect, useState } from "react";
 
 interface HeaderProps {
   handleScroll: (item: React.ReactNode) => void;
 }
 
 function NavigationBar({ handleScroll }: HeaderProps) {
+  const [active, setActive] = useState<string | null>(null);
+  const { section, setSection } = useViewStore();
+
   const handleClickMenu = (submenu: string) => {
+    setSection(null);
+    setActive(submenu);
     handleScroll(submenu);
   };
 
-  const { section } = useViewStore();
+  useEffect(() => {
+    if (section) {
+      setActive(null);
+    }
+  }, [section]);
 
   return (
     <>
@@ -29,11 +39,13 @@ function NavigationBar({ handleScroll }: HeaderProps) {
                   return (
                     <li
                       key={index}
-                      className={`ml-4 text-sm  ${
-                        section === submenu
-                          ? "text-yellow-400 font-extrabold"
+                      className={`ml-4 text-sm ${
+                        active && active === submenu
+                          ? "text-yellow-300"
+                          : section === submenu
+                          ? "text-yellow-300 font-bold"
                           : "text-zinc-500"
-                      } focus:text-yellow-300 `}
+                      }`}
                       onClick={() => handleClickMenu(submenu)}
                     >
                       {submenu}

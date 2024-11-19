@@ -12,13 +12,16 @@ import { ScorllTopButton } from "./components/ScrollTopButton";
 import { Education } from "./components/Educations";
 import Certificate from "./components/Certificate";
 import Award from "./components/Awards";
+import { useViewStore } from "./store/viewStore";
 
 function App() {
+  const { section } = useViewStore();
   const handleScroll = (item: React.ReactNode) => {
     if (item) {
       const container = document.getElementById(item.toString());
       if (container) {
-        // container.style.scrollMarginTop = "50px";
+        container.style.scrollMarginTop = "500px";
+
         container.scrollIntoView({ behavior: "smooth" });
       }
     }
@@ -38,7 +41,7 @@ function App() {
           <Home />
         </div>
 
-        <div className="md:py-36 py-10 md:px-20 px-3" id="About">
+        <div className="md:py-36 py-10 md:px-20 px-5" id="About">
           <AboutMe />
         </div>
         <div className="flex flex-row">

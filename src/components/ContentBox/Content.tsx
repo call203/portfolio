@@ -24,16 +24,13 @@ export const Content = ({
 
   useEffect(() => {
     if (isInView) {
+      console.log(navTitle + "#@$#");
       setSection(navTitle);
     }
   }, [isInView, title, navTitle, setSection]);
 
   return (
-    <div
-      className="font-sans mb-20"
-      id={navTitle ? navTitle : title}
-      ref={viewRef}
-    >
+    <div className="font-sans mb-20" id={navTitle} ref={viewRef}>
       <div>
         <div className="text-xl md:text-2xl mb-3">{subtitle}</div>
         <div className="text-2xl md:text-4xl mb-1 font-extrabold">{title}</div>

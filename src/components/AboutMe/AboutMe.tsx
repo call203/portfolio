@@ -52,9 +52,7 @@ export const AboutMe = () => {
             >
               <p>
                 안녕하세요!{" "}
-                <span className="font-bold">
-                  직관적이고 편리함을 추구하는 앱 & 웹 개발자 입니다.
-                </span>
+                <span className="font-bold">앱 & 웹 개발자 이소연입니다.</span>
               </p>
             </motion.p>
           </div>
@@ -64,15 +62,13 @@ export const AboutMe = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               custom={2}
-              className="font-normal md:mb-6 mb-5"
+              className="font-semibold mb-2 bg-orange-100  text-orange-600 "
             >
-              사용자와 개발자 모두에게 직관적이고 편리한 경험을 제공하는 것을
-              목표로, 새로운 기술을 통해 문제를 더 쉽게 해결하는 방법을 끊임없이
-              탐구하고 있습니다.
+              ✨ 저는 이런 사람이에요.
             </motion.p>
           </div>
 
-          <div className="flex">
+          <div className="flex text-base">
             <motion.p
               variants={textVariants}
               initial="hidden"
@@ -80,20 +76,39 @@ export const AboutMe = () => {
               custom={2}
               className="font-normal md:mb-6 mb-5"
             >
-              기본 지식부터 깊이 있는 기술까지 꾸준히 학습하고, 책과 지식 공유
-              활동을 통해 전문성을 쌓아가며 발전을 추구합니다.
-            </motion.p>
-          </div>
-          <div className="flex">
-            <motion.p
-              variants={textVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              custom={2}
-              className="font-normal md:mb-6 mb-5"
-            >
-              프로젝트 목표 달성을 위해 다양한 직군과 원활히 협업하며, 멋지고
-              즐거운 서비스를 만드는데 관심이 많습니다.
+              <ul className="list-disc pl-4">
+                <li className="pb-1">
+                  <span className="font-bold">
+                    자연스럽게 이어지는 코드와 이해하기 쉬운 코드
+                  </span>
+                  를 작성하는 것을 중요하게 생각합니다.
+                </li>
+                <li className="pb-1">
+                  <span className="font-bold">전 세계 다양한 개발 경험</span>을
+                  가진 동료들과 함께 프로젝트를 진행하며,{" "}
+                  <span className="font-bold">한 언어에 대해 깊이 연구</span>한
+                  경험이 있습니다.
+                </li>
+                <li className="pb-1">
+                  두 개의 React Native 기반 애플리케이션에서{" "}
+                  <span className="font-bold">
+                    초기 환경 세팅부터 주요 기능 개발까지 리드
+                  </span>
+                  한 경험이 있습니다.
+                </li>
+                <li className="pb-1">
+                  <span className="font-extrabold">
+                    Next.js, React-query, Jest, Zustand{" "}
+                  </span>
+                  등 최신 프론트엔드 기술을 팔로우하며 지속적으로 성장하고
+                  있습니다.
+                </li>
+                <li>
+                  알게된 새로운 내용을 블로그에 기록해{" "}
+                  <span className="font-bold">다양한 사람들과 지식을 공유</span>
+                  하는 것을 즐깁니다.
+                </li>
+              </ul>
             </motion.p>
           </div>
         </div>
