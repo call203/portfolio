@@ -14,11 +14,11 @@ function Home() {
         <div className="md:text-5xl text-2xl font-bold md:mb-4 mb-2">
           이소연 입니다
         </div>
-        <div> Web & App Developer</div>
+        <div> Frontend Developer</div>
       </div>
 
       <div className="absolute bottom-0 w-full flex flex-col items-center text-gray-400 font-bold animate-bounce">
-        <p>Let's Scroll Down!</p>
+        <div>Let's Scroll Down!</div>
         <img src={DownImage} alt="scroll down" className="w-7 h-7" />
       </div>
     </div>

@@ -3,9 +3,13 @@ export type Link = {
   link: string;
 };
 
+export type Detail = {
+  title: string;
+  moreDetail?: string[];
+};
 export type Job = {
   title: string;
-  detail?: string[];
+  detail?: Detail[];
 };
 
 export interface TitleProps {

@@ -12,6 +12,7 @@ import { ScorllTopButton } from "./components/ScrollTopButton";
 import { Education } from "./components/Educations";
 import Certificate from "./components/Certificate";
 import Award from "./components/Awards";
+import Skill from "./components/Skill";
 
 function App() {
   const handleScroll = (item: React.ReactNode) => {
@@ -48,6 +49,9 @@ function App() {
           </div>
 
           <div className="px-3 py-0">
+            <div className="py-10 md:px-20 px-3" id="Experience">
+              <Skill />
+            </div>
             <div className="py-10 md:px-20 px-3" id="Experience">
               <Company />
             </div>

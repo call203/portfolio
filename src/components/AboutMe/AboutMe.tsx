@@ -50,10 +50,10 @@ export const AboutMe = () => {
               custom={1}
               className="font-normal md:mb-6 mb-5"
             >
-              <p>
+              <div>
                 안녕하세요!{" "}
                 <span className="font-bold">앱 & 웹 개발자 이소연입니다.</span>
-              </p>
+              </div>
             </motion.p>
           </div>
           <div className="flex">

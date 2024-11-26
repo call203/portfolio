@@ -1,5 +1,9 @@
 export const NavData = [
   {
+    title: "Skill",
+    subMenu: ["Mian", "System/Tool", "Once I used"]
+  },
+  {
     title: "Experience",
     subMenu: ["프로그라운드", "포크쇼핑", "룸프렌즈"]
   },
@@ -8,13 +12,12 @@ export const NavData = [
     subMenu: [
       "Chat Platform",
       "Local Service Provider Matching Platform",
-      "석사논문",
-      "학사논문"
+      "석사논문"
     ]
   },
   {
     title: "Education",
-    subMenu: ["석사", "학사"]
+    subMenu: ["석사"]
   },
   {
     title: "Certificate",

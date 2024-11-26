@@ -6,6 +6,9 @@ module.exports = {
       screens: {
         xs: { min: "380px" }
       }
+      // listStyleType: {
+      //   revert: "revert"
+      // }
     },
 
     fontFamily: {

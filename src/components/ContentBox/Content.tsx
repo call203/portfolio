@@ -24,7 +24,6 @@ export const Content = ({
 
   useEffect(() => {
     if (isInView) {
-      console.log(navTitle + "#@$#");
       setSection(navTitle);
     }
   }, [isInView, title, navTitle, setSection]);
@@ -41,7 +40,10 @@ export const Content = ({
           {skills &&
             skills.map((skill, index) => {
               return (
-                <div className="py-1 px-2 bg-zinc-300 rounded-lg text-black text-xs mr-2 font-semibold mt-1">
+                <div
+                  key={index}
+                  className="py-1 px-2 bg-zinc-300 rounded-lg text-black text-xs mr-2 font-semibold mt-1"
+                >
                   <span>{skill}</span>
                 </div>
               );
@@ -62,16 +64,33 @@ export const Content = ({
                     <div>
                       <span className="text-lg md:text-xl ">{job.title}</span>
 
-                      <ul className="list-disc list-inside mt-2">
+                      <ul className="list-disc mt-2">
                         {job.detail &&
                           job.detail.map((i, index) => {
                             return (
-                              <li
-                                key={index}
-                                className="md:text-base text-sm mb-2 "
-                              >
-                                {i}
-                              </li>
+                              <div key={index}>
+                                <li className="md:text-base text-sm md:mb-3 mb-1 font-semibold list-disc">
+                                  {i.title}
+                                  <ul
+                                    className="pl-5 list-disc list-outside ml-4 font-normal"
+                                    style={{ listStyleType: "circle" }}
+                                  >
+                                    {i.moreDetail &&
+                                      i.moreDetail.map(
+                                        (detail, detailIndex) => {
+                                          return (
+                                            <li
+                                              className="mb-1"
+                                              key={detailIndex}
+                                            >
+                                              {detail}
+                                            </li>
+                                          );
+                                        }
+                                      )}
+                                  </ul>
+                                </li>
+                              </div>
                             );
                           })}
                       </ul>
