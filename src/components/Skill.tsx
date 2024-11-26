@@ -17,7 +17,7 @@ function Skill() {
             <div className="font-bold md:text-2xl text-xl mb-1">
               {item.title}
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row flex-wrap">
               {item.skills.map((i, index) => {
                 return (
                   <div
